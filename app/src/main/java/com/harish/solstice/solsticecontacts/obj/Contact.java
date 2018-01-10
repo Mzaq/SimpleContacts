@@ -5,8 +5,6 @@ package com.harish.solstice.solsticecontacts.obj;
  */
 
 import java.io.Serializable;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Contact implements Serializable {
     private String name;
@@ -19,11 +17,10 @@ public class Contact implements Serializable {
     private String birthdate;
     private Phone phone;
     private Address address;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     public Contact(String name, String id, String companyName, Boolean isFavorite,
-                   String smallImageURL, String largeImageURL, String emailAddress, String birthdate,
-                   Phone phone, Address address, Map<String, Object> additionalProperties) {
+                   String smallImageURL, String largeImageURL, String emailAddress,
+                   String birthdate, Phone phone, Address address) {
         this.name = name;
         this.id = id;
         this.companyName = companyName;
@@ -34,7 +31,6 @@ public class Contact implements Serializable {
         this.birthdate = birthdate;
         this.phone = phone;
         this.address = address;
-        this.additionalProperties = additionalProperties;
     }
 
     public String getName() {
@@ -116,13 +112,4 @@ public class Contact implements Serializable {
     public void setAddress(Address address) {
         this.address = address;
     }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
-
 }
