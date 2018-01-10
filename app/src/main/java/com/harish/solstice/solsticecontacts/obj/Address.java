@@ -1,5 +1,9 @@
 package com.harish.solstice.solsticecontacts.obj;
 
+/**
+ * Created by Harish Veeramani on 1/8/2018.
+ */
+
 import java.io.Serializable;
 
 public class Address implements Serializable {

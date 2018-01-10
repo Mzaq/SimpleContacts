@@ -1,8 +1,9 @@
 package com.harish.solstice.solsticecontacts.obj;
 
 /**
- * Created by hdv98 on 1/9/2018.
+ * Created by Harish Veeramani on 1/8/2018.
  */
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
