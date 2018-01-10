@@ -1,17 +1,20 @@
 <resources>
-    <string name="app_name" translatable="false">Solstice Challenge</string>
+    <string name="app_name" translatable="false">Solstice Contacts</string>
     <string name="loading_message">Please wait…</string>
     <string name="service_error_message">Error getting contact list from server.</string>
     <string name="contacts">Contacts</string>
+    <string name="action_bar_title">Contacts</string>
+
     <string name="favorite_contacts_title">FAVORITE CONTACTS</string>
     <string name="other_contacts_title">OTHER CONTACTS</string>
     <string name="phone_header">PHONE:</string>
+    <string name="address_header">ADDRESS:</string>
+    <string name="birthday_header">BIRTHDATE:</string>
+    <string name="email_header">EMAIL:</string>
+
     <string name="home_header">Home</string>
     <string name="mobile_header">Mobile</string>
     <string name="work_header">Work</string>
-    <string name="address_header">ADDRESS:</string>
+
     <string name="address_formatted" translatable="false">%1$s, \n%2$s, %3$s %4$s, %5$s</string>
-    <string name="birthday_header">BIRTHDATE:</string>
-    <string name="email_header">EMAIL:</string>
-    <string name="action_bar_title">Contacts</string>
 </resources>
