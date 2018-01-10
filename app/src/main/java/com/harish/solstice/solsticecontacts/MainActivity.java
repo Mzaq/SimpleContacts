@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements CustomEventListen
 
     private void showHideProgressDialog(Boolean hasToShow) {
         if (hasToShow){
-            mProgressDialog.setMessage(getString(R.string.loadingText));
+            mProgressDialog.setMessage(getString(R.string.loading_message));
             mProgressDialog.show();
         } else {
             mProgressDialog.hide();
@@ -84,10 +84,10 @@ public class MainActivity extends AppCompatActivity implements CustomEventListen
 
         for (Contact contact : contactList){
             if (contact.getIsFavorite() && !favoriteHeader) {
-                items.add(getString(R.string.favoriteTitle));
+                items.add(getString(R.string.favorite_contacts_title));
                 favoriteHeader = true;
             } else if(!contact.getIsFavorite() && !otherHeader) {
-                items.add(getString(R.string.otherContactsTitle));
+                items.add(getString(R.string.other_contacts_title));
                 otherHeader = true;
             }
 
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements CustomEventListen
 
     private void serviceErrorMessage(Boolean serviceHasError) {
         if (serviceHasError){
-            Snackbar.make(recyclerView, R.string.errorService, Snackbar.LENGTH_LONG);
+            Snackbar.make(recyclerView, R.string.service_error_message, Snackbar.LENGTH_LONG);
         }
     }
 

@@ -89,13 +89,13 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
     }
 
     public class ContactViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        @BindView(R.id.contactImage)
+        @BindView(R.id.contact_image_view)
         ImageView contactImage;
-        @BindView(R.id.contactName)
+        @BindView(R.id.contact_name_text_view)
         TextView contactName;
-        @BindView(R.id.starImage)
+        @BindView(R.id.contact_favorite_image_view)
         ImageView favoriteImage;
-        @BindView(R.id.descriptionText)
+        @BindView(R.id.contact_description_text_view)
         TextView descriptionText;
 
         private Context context;

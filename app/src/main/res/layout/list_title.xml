@@ -14,7 +14,7 @@
         android:paddingEnd="12dp"
         android:paddingStart="12dp"
         android:paddingTop="4dp"
-        android:text="@string/favoriteTitle"
+        android:text="@string/favorite_contacts_title"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

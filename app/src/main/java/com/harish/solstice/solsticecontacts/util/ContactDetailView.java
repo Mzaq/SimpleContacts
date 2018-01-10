@@ -22,7 +22,7 @@ public class ContactDetailView extends ConstraintLayout {
     TextView titleText;
     @BindView(R.id.info_description_text_view)
     TextView descriptionText;
-    @BindView(R.id.typeText)
+    @BindView(R.id.info_type_text_view)
     TextView typeText;
 
     private void init(@Nullable AttributeSet attributeSet) {

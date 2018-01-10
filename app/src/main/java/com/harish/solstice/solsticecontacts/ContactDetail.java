@@ -30,9 +30,9 @@ import butterknife.ButterKnife;
  */
 
 public class ContactDetail extends AppCompatActivity {
-    @BindView(R.id.contactName)
+    @BindView(R.id.contact_name_text_view)
     TextView contactName;
-    @BindView(R.id.contactImage)
+    @BindView(R.id.contact_image_view)
     ImageView contactImage;
     @BindView(R.id.companyName)
     TextView companyName;
@@ -125,9 +125,9 @@ public class ContactDetail extends AppCompatActivity {
 
     private void setHomePhone() {
         if (mContact != null && mContact.getPhone().getHome() != null && !mContact.getPhone().getHome().isEmpty()){
-            homePhone.setTitleText(getString(R.string.phoneText));
+            homePhone.setTitleText(getString(R.string.phone_header));
             homePhone.setDescriptionText(formatPhoneNumber(mContact.getPhone().getHome()));
-            homePhone.setTypeText(getString(R.string.homeText));
+            homePhone.setTypeText(getString(R.string.home_header));
         } else {
             homePhone.setVisibility(View.GONE);
         }
@@ -135,9 +135,9 @@ public class ContactDetail extends AppCompatActivity {
 
     private void setMobilePhone() {
         if (mContact != null && mContact.getPhone().getMobile() != null && !mContact.getPhone().getMobile().isEmpty()){
-            mobilePhone.setTitleText(getString(R.string.phoneText));
+            mobilePhone.setTitleText(getString(R.string.phone_header));
             mobilePhone.setDescriptionText(formatPhoneNumber(mContact.getPhone().getMobile()));
-            mobilePhone.setTypeText(getString(R.string.mobileText));
+            mobilePhone.setTypeText(getString(R.string.mobile_header));
         } else {
             mobilePhone.setVisibility(View.GONE);
         }
@@ -145,9 +145,9 @@ public class ContactDetail extends AppCompatActivity {
 
     private void setWorkPhone() {
         if (mContact != null && mContact.getPhone().getWork() != null && !mContact.getPhone().getWork().isEmpty()){
-            workPhone.setTitleText(getString(R.string.phoneText));
+            workPhone.setTitleText(getString(R.string.phone_header));
             workPhone.setDescriptionText(formatPhoneNumber(mContact.getPhone().getWork()));
-            workPhone.setTypeText(getString(R.string.workText));
+            workPhone.setTypeText(getString(R.string.work_header));
         } else {
             workPhone.setVisibility(View.GONE);
         }
@@ -155,8 +155,8 @@ public class ContactDetail extends AppCompatActivity {
 
     private void setAddress(){
         if (mContact != null && mContact.getAddress() != null && !mContact.getAddress().toString().isEmpty()){
-            address.setTitleText(getString(R.string.addressText));
-            address.setDescriptionText(getString(R.string.addressToSet, mContact.getAddress().getStreet(),
+            address.setTitleText(getString(R.string.address_header));
+            address.setDescriptionText(getString(R.string.address_formatted, mContact.getAddress().getStreet(),
                     mContact.getAddress().getCity(), mContact.getAddress().getState(),
                     mContact.getAddress().getZipCode(), mContact.getAddress().getCountry()));
         } else {
@@ -166,7 +166,7 @@ public class ContactDetail extends AppCompatActivity {
 
     private void setBirthday(){
         if (mContact != null && mContact.getBirthdate() != null && !mContact.getBirthdate().isEmpty()){
-            birthday.setTitleText(getString(R.string.birthdayText));
+            birthday.setTitleText(getString(R.string.birthday_header));
             try {
                 birthday.setDescriptionText(formatDate(mContact.getBirthdate()));
             } catch (Exception e){
@@ -180,7 +180,7 @@ public class ContactDetail extends AppCompatActivity {
 
     private void setEmail(){
         if (mContact != null && mContact.getEmailAddress() != null && !mContact.getEmailAddress().isEmpty()){
-            email.setTitleText(getString(R.string.emailText));
+            email.setTitleText(getString(R.string.email_header));
             email.setDescriptionText(mContact.getEmailAddress());
         } else {
             email.setVisibility(View.GONE);

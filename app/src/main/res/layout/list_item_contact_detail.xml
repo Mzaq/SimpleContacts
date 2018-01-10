@@ -34,13 +34,13 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/separator_line"
-        app:layout_constraintEnd_toStartOf="@+id/typeText"
+        app:layout_constraintEnd_toStartOf="@+id/info_type_text_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/info_title_text_view"
         tools:text="TextView" />
 
     <TextView
-        android:id="@+id/typeText"
+        android:id="@+id/info_type_text_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -53,13 +53,13 @@
 
     <View
         android:id="@+id/separator_line"
+        android:background="@color/lightGrey"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:background="@color/lightGrey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

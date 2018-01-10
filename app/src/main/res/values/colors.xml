@@ -5,9 +5,9 @@
     <color name="colorAccent">#FFC107</color>
 
     <color name="red">#FF0000</color>
-    <color name="lightGrey">#E0E0E0</color>
-    <color name="darkGrey">#6E6E6E</color>
     <color name="white">#ffffff</color>
     <color name="blue">#006df0</color>
+    <color name="lightGrey">#E0E0E0</color>
+    <color name="darkGrey">#6E6E6E</color>
 
 </resources>

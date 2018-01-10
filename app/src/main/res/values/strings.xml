@@ -1,17 +1,17 @@
 <resources>
     <string name="app_name" translatable="false">Solstice Challenge</string>
-    <string name="loadingText">Please wait...</string>
-    <string name="errorService">Error getting contact list from server, Please verify Internet connection.</string>
-    <string name="mainActivityTitle">Contacts</string>
-    <string name="favoriteTitle">FAVORITE CONTACTS</string>
-    <string name="otherContactsTitle">OTHER CONTACTS</string>
-    <string name="phoneText">PHONE:</string>
-    <string name="homeText">Home</string>
-    <string name="mobileText">Mobile</string>
-    <string name="workText">Work</string>
-    <string name="addressText">ADDRESS:</string>
-    <string name="addressToSet" translatable="false">%1$s, \n%2$s, %3$s %4$s, %5$s</string>
-    <string name="birthdayText">BIRTHDATE:</string>
-    <string name="emailText">EMAIL:</string>
-    <string name="action_bar_detail">Contacts</string>
+    <string name="loading_message">Please wait…</string>
+    <string name="service_error_message">Error getting contact list from server.</string>
+    <string name="contacts">Contacts</string>
+    <string name="favorite_contacts_title">FAVORITE CONTACTS</string>
+    <string name="other_contacts_title">OTHER CONTACTS</string>
+    <string name="phone_header">PHONE:</string>
+    <string name="home_header">Home</string>
+    <string name="mobile_header">Mobile</string>
+    <string name="work_header">Work</string>
+    <string name="address_header">ADDRESS:</string>
+    <string name="address_formatted" translatable="false">%1$s, \n%2$s, %3$s %4$s, %5$s</string>
+    <string name="birthday_header">BIRTHDATE:</string>
+    <string name="email_header">EMAIL:</string>
+    <string name="action_bar_title">Contacts</string>
 </resources>
