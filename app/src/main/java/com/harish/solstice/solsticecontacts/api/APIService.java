@@ -9,13 +9,10 @@ import io.reactivex.Observable;
 import retrofit2.http.GET;
 
 /**
- * Created by hdv98 on 1/9/2018.
+ * Created by Harish Veeramani on 1/9/2018.
  */
 
 public interface APIService {
     @GET(Config.API_CALL)
     Observable<List<Contact>> getCompletePhonebook();
-
-    @GET(Config.API_CALL)
-    Observable<Contact> getSinglePhonebook();
 }
