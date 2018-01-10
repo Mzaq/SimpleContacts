@@ -34,19 +34,19 @@ public class ContactDetail extends AppCompatActivity {
     TextView contactName;
     @BindView(R.id.contact_image_view)
     ImageView contactImage;
-    @BindView(R.id.companyName)
+    @BindView(R.id.contact_company_text_view)
     TextView companyName;
-    @BindView(R.id.homePhoneCIV)
+    @BindView(R.id.contact_homephone_detailview)
     ContactDetailView homePhone;
-    @BindView(R.id.mobilePhoneCIV)
+    @BindView(R.id.contact_mobilephone_detailview)
     ContactDetailView mobilePhone;
-    @BindView(R.id.workPhoneCIV)
+    @BindView(R.id.contact_workphone_detailview)
     ContactDetailView workPhone;
-    @BindView(R.id.addressCIV)
+    @BindView(R.id.contact_address_detailview)
     ContactDetailView address;
-    @BindView(R.id.birthdayCIV)
+    @BindView(R.id.contact_birthday_detailview)
     ContactDetailView birthday;
-    @BindView(R.id.emailCIV)
+    @BindView(R.id.contact_email_detailview)
     ContactDetailView email;
 
     private Contact mContact;

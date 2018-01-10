@@ -33,7 +33,7 @@
         android:layout_marginTop="8dp"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/separator_line"
+        app:layout_constraintBottom_toTopOf="@+id/separator"
         app:layout_constraintEnd_toStartOf="@+id/info_type_text_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/info_title_text_view"
@@ -52,7 +52,7 @@
         tools:text="TextView" />
 
     <View
-        android:id="@+id/separator_line"
+        android:id="@+id/separator"
         android:background="@color/lightGrey"
         android:layout_width="match_parent"
         android:layout_height="1dp"
