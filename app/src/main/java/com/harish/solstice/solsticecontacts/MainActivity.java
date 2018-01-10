@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements CustomEventListen
     RecyclerView recyclerView;
 
     private MainActivityViewModel mViewModel;
-    private MainRecyclerViewAdapter mAdapter;
+    private RecyclerViewAdapter mAdapter;
     private ProgressDialog mProgressDialog;
     private List<Contact> mContactList;
 
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements CustomEventListen
 
         ButterKnife.bind(this);
 
-        mAdapter = new MainRecyclerViewAdapter(this, this.getLayoutInflater(), this);
+        mAdapter = new RecyclerViewAdapter(this, this.getLayoutInflater(), this);
         mViewModel = ViewModelProviders.of(this).get(MainActivityViewModel.class);
         mProgressDialog = new ProgressDialog(this);
         mContactList = new ArrayList<>();

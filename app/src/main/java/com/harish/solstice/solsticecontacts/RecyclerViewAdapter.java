@@ -21,7 +21,7 @@ import butterknife.ButterKnife;
  * Created by Harish Veeramani on 1/9/2018.
  */
 
-public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     private LayoutInflater mLayoutInflater;
     private List<Object> mItems;
     private Context mContext;
@@ -30,7 +30,7 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
     private static final int CONTACT_VIEW_TITLE = 0;
     private static final int CONTACT_VIEW_ITEM = 1;
 
-    public MainRecyclerViewAdapter(Context context, LayoutInflater layoutInflater, CustomEventListener eventListener) {
+    public RecyclerViewAdapter(Context context, LayoutInflater layoutInflater, CustomEventListener eventListener) {
         this.mLayoutInflater = layoutInflater;
         this.mContext = context;
         this.mCustomEventListener = eventListener;
