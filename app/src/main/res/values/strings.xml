@@ -16,5 +16,5 @@
     <string name="mobile_header">Mobile</string>
     <string name="work_header">Work</string>
 
-    <string name="address_formatted" translatable="false">%1$s, \n%2$s, %3$s %4$s, %5$s</string>
+    <string name="address_formatted" translatable="false">%1$s \n%2$s, %3$s %4$s, %5$s</string>
 </resources>

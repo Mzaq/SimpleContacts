@@ -208,6 +208,7 @@ public class ContactDetail extends AppCompatActivity {
         StringBuilder stringBuilder = new StringBuilder(phoneString);
         stringBuilder.insert(0, '(');
         stringBuilder.insert(4, ')');
+        stringBuilder.replace(5, 6, " ");
 
         return stringBuilder.toString();
     }

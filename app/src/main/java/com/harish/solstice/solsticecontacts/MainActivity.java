@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements CustomEventListen
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
 
-        mViewModel.callPhoneBookService();
+        mViewModel.callAPIService();
     }
 
     @Override

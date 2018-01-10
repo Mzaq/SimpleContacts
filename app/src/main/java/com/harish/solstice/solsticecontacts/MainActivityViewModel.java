@@ -42,7 +42,7 @@ public class MainActivityViewModel extends ViewModel {
         mShowContacts = new MutableLiveData<>();
     }
 
-    public void callPhoneBookService(){
+    public void callAPIService(){
         APIService service = mRetrofit.create(APIService.class);
 
         mCompositeDisposable.add(service.getAllContacts()
