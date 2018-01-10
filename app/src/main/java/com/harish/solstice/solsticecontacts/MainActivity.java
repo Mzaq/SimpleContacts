@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements CustomEventListen
         super.onStart();
         mViewModel.getShowErrorMessage().observe(this, this::serviceErrorMessage);
         mViewModel.getShowHideLoadingImage().observe(this, this::showHideProgressDialog);
-        mViewModel.getShowPhoneBook().observe(this, this::showPhoneBookList);
+        mViewModel.getShowContacts().observe(this, this::showContactList);
     }
 
     private void showHideProgressDialog(Boolean hasToShow) {
@@ -75,10 +75,10 @@ public class MainActivity extends AppCompatActivity implements CustomEventListen
         }
     }
 
-    private void showPhoneBookList(List<Contact> contactList) {
+    private void showContactList(List<Contact> contactList) {
         if (contactList != null) {
             this.mContactList = contactList;
-            sortPhoneBookList(contactList);
+            sortContacts(contactList);
             mAdapter.addContactList(addHeadersList(contactList));
         }
     }
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements CustomEventListen
         return items;
     }
 
-    private void sortPhoneBookList(List<Contact> contactList) {
+    private void sortContacts(List<Contact> contactList) {
         if (!contactList.isEmpty()) {
             Collections.sort(contactList, new Comparator<Contact>() {
                 @Override
@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements CustomEventListen
                         this.mContactList.set(i, contact);
                     }
                 }
-                showPhoneBookList(this.mContactList);
+                showContactList(this.mContactList);
             }
         }
     }

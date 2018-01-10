@@ -25,7 +25,7 @@ public class MainActivityViewModel extends ViewModel {
     private CompositeDisposable mCompositeDisposable;
     private MutableLiveData<Boolean> mShowHideLoadingImage;
     private MutableLiveData<Boolean> mShowErrorMessage;
-    private MutableLiveData<List<Contact>> mShowPhoneBook;
+    private MutableLiveData<List<Contact>> mShowContacts;
 
     public MainActivityViewModel() {
         super();
@@ -39,13 +39,13 @@ public class MainActivityViewModel extends ViewModel {
         mCompositeDisposable = new CompositeDisposable();
         mShowErrorMessage = new MutableLiveData<>();
         mShowHideLoadingImage = new MutableLiveData<>();
-        mShowPhoneBook = new MutableLiveData<>();
+        mShowContacts = new MutableLiveData<>();
     }
 
     public void callPhoneBookService(){
         APIService service = mRetrofit.create(APIService.class);
 
-        mCompositeDisposable.add(service.getCompletePhonebook()
+        mCompositeDisposable.add(service.getAllContacts()
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(this::handleResponse, this::handleError));
@@ -54,7 +54,7 @@ public class MainActivityViewModel extends ViewModel {
     }
 
     private void handleResponse(List<Contact> contactList) {
-        setShowPhoneBook(contactList);
+        setShowContacts(contactList);
         setShowHideLoadingImage(false);
     }
 
@@ -75,12 +75,12 @@ public class MainActivityViewModel extends ViewModel {
         return mShowErrorMessage;
     }
 
-    public MutableLiveData<List<Contact>> getShowPhoneBook() {
-        return mShowPhoneBook;
+    public MutableLiveData<List<Contact>> getShowContacts() {
+        return mShowContacts;
     }
 
-    private void setShowPhoneBook(List<Contact> contactList) {
-        this.mShowPhoneBook.setValue(contactList);
+    private void setShowContacts(List<Contact> contactList) {
+        this.mShowContacts.setValue(contactList);
     }
 }
 

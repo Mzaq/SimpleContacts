@@ -14,5 +14,5 @@ import retrofit2.http.GET;
 
 public interface APIService {
     @GET(Config.API_CALL)
-    Observable<List<Contact>> getCompletePhonebook();
+    Observable<List<Contact>> getAllContacts();
 }
