@@ -98,13 +98,13 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
         @BindView(R.id.contact_description_text_view)
         TextView descriptionText;
 
-        private Context context;
+        private Context mContext;
         private Contact mContact;
         private CustomEventListener mCustomEventListener;
 
         public ContactViewHolder(View itemView, Context context, CustomEventListener eventListener) {
             super(itemView);
-            this.context = context;
+            this.mContext = context;
             this.mCustomEventListener = eventListener;
             itemView.setOnClickListener(this);
             ButterKnife.bind(this, itemView);
@@ -115,7 +115,7 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
 
             contactName.setText(contact.getName());
 
-            Picasso.with(context)
+            Picasso.with(mContext)
                     .load(contact.getSmallImageURL())
                     .placeholder(R.drawable.ic_placeholder_image)
                     .into(contactImage);
@@ -139,7 +139,7 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
 
     public class TitleViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.title_text)
-        TextView mTitleText;
+        TextView titleText;
 
         public TitleViewHolder(View itemView) {
             super(itemView);
@@ -147,7 +147,7 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
         }
 
         public void bindTitle(String title) {
-            mTitleText.setText(title);
+            titleText.setText(title);
         }
     }
 }
