@@ -24,8 +24,13 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+/**
+ * Created by Harish Veeramani on 1/8/2018.
+ */
+
 public class MainActivity extends AppCompatActivity implements CustomEventListener {
-    @BindView(R.id.contacts_recycler_view) RecyclerView recyclerView;
+    @BindView(R.id.contacts_recycler_view)
+    RecyclerView recyclerView;
 
     private MainActivityViewModel mViewModel;
     private MainRecyclerViewAdapter mAdapter;
@@ -62,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements CustomEventListen
     }
 
     private void showHideProgressDialog(Boolean hasToShow) {
-        if (hasToShow){
+        if (hasToShow) {
             mProgressDialog.setMessage(getString(R.string.loading_message));
             mProgressDialog.show();
         } else {
@@ -82,11 +87,11 @@ public class MainActivity extends AppCompatActivity implements CustomEventListen
         List<Object> items = new ArrayList<>();
         boolean favoriteHeader = false, otherHeader = false;
 
-        for (Contact contact : contactList){
+        for (Contact contact : contactList) {
             if (contact.getIsFavorite() && !favoriteHeader) {
                 items.add(getString(R.string.favorite_contacts_title));
                 favoriteHeader = true;
-            } else if(!contact.getIsFavorite() && !otherHeader) {
+            } else if (!contact.getIsFavorite() && !otherHeader) {
                 items.add(getString(R.string.other_contacts_title));
                 otherHeader = true;
             }
@@ -98,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements CustomEventListen
     }
 
     private void sortPhoneBookList(List<Contact> contactList) {
-        if (!contactList.isEmpty()){
+        if (!contactList.isEmpty()) {
             Collections.sort(contactList, new Comparator<Contact>() {
                 @Override
                 public int compare(Contact o1, Contact o2) {
@@ -113,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements CustomEventListen
     }
 
     private void serviceErrorMessage(Boolean serviceHasError) {
-        if (serviceHasError){
+        if (serviceHasError) {
             Snackbar.make(recyclerView, R.string.service_error_message, Snackbar.LENGTH_LONG);
         }
     }
@@ -140,14 +145,13 @@ public class MainActivity extends AppCompatActivity implements CustomEventListen
             if (data != null) {
                 Contact contact = (Contact) data.getSerializableExtra(Config.CONTACT_KEY);
 
-                for (int i = 0; i< mContactList.size(); i++){
-                    if (mContactList.get(i).getId().equals(contact.getId())){
+                for (int i = 0; i < mContactList.size(); i++) {
+                    if (mContactList.get(i).getId().equals(contact.getId())) {
                         this.mContactList.set(i, contact);
                     }
                 }
                 showPhoneBookList(this.mContactList);
             }
         }
-
     }
 }
